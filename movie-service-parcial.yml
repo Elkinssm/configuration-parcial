@@ -1,40 +1,57 @@
+#server:
+#  port: 8001
+#
+#spring:
+#  application:
+#    name: movie-service
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password: sa
+#  jpa:
+#    open-in-view: false
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.H2Dialect
+#        format_sql: true
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+#
+#message: hello from movie-service
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#eureka:
+#  instance:
+#    instance-id: ${spring.application.name}:${random.uuid}
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceURL:
+#      defaultZone: http://localhost:8761/eureka
 server:
-  port: 8001
+  port: ${PORT:${SERVER_PORT:0}}
+
+idRandom: ${random.value}
 
 spring:
   application:
-    name: movie-service
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: sa
-  jpa:
-    open-in-view: false
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-        format_sql: true
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-
-message: hello from movie-service
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+    name: movie-service-parcial
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${random.uuid}
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     registerWithEureka: true
     fetchRegistry: true
-    serviceURL:
-      defaultZone: http://localhost:8761/eureka
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
