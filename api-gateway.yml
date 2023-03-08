@@ -24,6 +24,8 @@ info:
     name: ${spring.application.name}
 
 eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
   client:
     registerWithEureka: true
     fetchRegistry: true
