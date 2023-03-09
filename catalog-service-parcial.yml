@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: catalog-service
+    name: catalog-service-parcial
   datasource:
     url: jdbc:h2:mem:testdb
     username: sa
