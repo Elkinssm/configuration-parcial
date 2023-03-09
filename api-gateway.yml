@@ -10,12 +10,12 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: catalog-service
-          uri: lb://catalog-service
+        - id: catalog-service-parcial
+          uri: lb://catalog-service-parcial
           predicates:
             - Path=/catalog/**
-        - id: movie-service
-          uri: lb://movie-service
+        - id: movie-service-parcial
+          uri: lb://movie-service-parcial
           predicates:
             - Path=/movies/**
 
@@ -27,7 +27,7 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: true
     serviceURL:
       defaultZone: http://localhost:8761/eureka
