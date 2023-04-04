@@ -17,11 +17,11 @@ spring:
         - id: movie-service-parcial
           uri: lb://movie-service-parcial
           predicates:
-            - Path=/movie/**    
+            - Path=/movies/**    
         - id: serie-service-parcial
           uri: lb://serie-service-parcial
           predicates:
-            - Path=/serie/**              
+            - Path=/series/**              
 
 
 info:
