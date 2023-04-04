@@ -14,6 +14,14 @@ spring:
           uri: lb://catalog-service-parcial
           predicates:
             - Path=/catalog/**
+        - id: movie-service-parcial
+          uri: lb://movie-service-parcial
+          predicates:
+            - Path=/movie/**    
+        - id: serie-service-parcial
+          uri: lb://serie-service-parcial
+          predicates:
+            - Path=/serie/**              
 
 
 info:
