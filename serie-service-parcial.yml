@@ -4,10 +4,13 @@ server:
 spring:
   application:
     name: serie-service-parcial
+  mongodb:
+    embedded:
+      version: 4.0.2
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/serie
-      database: serie
+      database: test
+      port: 27017
 management:
   endpoints:
     web:
