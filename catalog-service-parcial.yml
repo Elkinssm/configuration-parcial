@@ -11,7 +11,9 @@ spring:
   data:
     mongodb:
       database: Series
-      port: 27017    
+      port: 27018 
+      host: localhost
+      authentication-database: admin      
 #   mongodb:
 #     embedded:
 #       version: 4.0.2
