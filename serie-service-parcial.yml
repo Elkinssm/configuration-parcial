@@ -4,15 +4,13 @@ server:
 spring:
   application:
     name: serie-service-parcial
-  mongodb:
+mongodb:
     embedded:
       version: 4.0.2
   data:
     mongodb:
-      database: Series
-      port: 27017
-      host: localhost
-      authentication-database: admin
+      database: test
+      port: 27018
 management:
   endpoints:
     web:
