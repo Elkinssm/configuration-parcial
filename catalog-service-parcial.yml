@@ -10,7 +10,7 @@ spring:
       version: 4.0.2
   data:
     mongodb:
-      database: catalog
+      database: Catalog
       port: 27017
       host: localhost
       authentication-database: admin
