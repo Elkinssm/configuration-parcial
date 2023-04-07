@@ -11,6 +11,8 @@ spring:
     mongodb:
       database: test
       port: 27017
+      host: '${MONGO_HOST}'
+      authentication-database: admin
       
   zipkin:
     base-url: http://localhost:9411/
