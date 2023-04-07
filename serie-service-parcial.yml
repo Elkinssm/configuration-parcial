@@ -11,6 +11,7 @@ spring:
     mongodb:
       database: Series
       port: 27018
+      host: localhost
 management:
   endpoints:
     web:
