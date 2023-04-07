@@ -11,7 +11,7 @@ spring:
   data:
     mongodb:
       database: Series
-      port: 27018 
+      port: 27017
       host: localhost
       authentication-database: admin      
 #   mongodb:
