@@ -4,7 +4,7 @@ server:
 spring:
   application:
     name: serie-service-parcial
-mongodb:
+  mongodb:
     embedded:
       version: 4.0.2
   data:
