@@ -1,47 +1,33 @@
-
-# server:
-#   port: ${PORT:${SERVER_PORT:0}}
-
-# spring:
-#   application:
-#     name: catalog-service-parcial
-# mongodb:
-#     embedded:
-#       version: 4.0.2
-#   data:
-#     mongodb:
-#       database: test
-#       port: 27017 
-# #   mongodb:
-# #     embedded:
-# #       version: 4.0.2
-# #   data:
-# #     mongodb:
-# #       database: Series
-# #       port: 27017
-# #       host: localhost
-# #       authentication-database: admin      
-# #   mongodb:
-# #     embedded:
-# #       version: 4.0.2
-# #   data:
-# #     mongodb:
-# #       database: Catalog
-# #       port: 27017
-# #       host: localhost
-# #       authentication-database: admin
-      
-#   zipkin:
-#     base-url: http://localhost:9411/
-#     enabled: true        
-
-# message: hello from catalog-service
-
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: '*'
-# eureka:
-#   instance:
-#     instance-id: ${spring.application.name}:${random.uuid}    
+server:
+  port: '${PORT:${SERVER_PORT:0}}'
+spring:
+  application:
+    name: serie-service-parcial
+  zipkin:
+    base-url: 'http://localhost:9411/'
+    enabled: true
+  mongodb:
+    embedded:
+      version: 4.0.2
+  data:
+    mongodb:
+      database: test
+      port: 27017
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+queue:
+  serie:
+    name: NewSerie
+  movie:
+    name: NewMovie
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  instance:
+    instance-id: '${spring.application.name}:${random.uuid}'
