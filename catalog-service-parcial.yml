@@ -1,3 +1,4 @@
+
 server:
   port: ${PORT:${SERVER_PORT:0}}
 
@@ -9,9 +10,10 @@ spring:
       version: 4.0.2
   data:
     mongodb:
-      host: localhost
-      port: 27017
       database: catalog
+      port: 27017
+      host: localhost
+      authentication-database: admin
       
   zipkin:
     base-url: http://localhost:9411/
@@ -26,4 +28,4 @@ management:
         include: '*'
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${random.uuid}       
+    instance-id: ${spring.application.name}:${random.uuid}    
