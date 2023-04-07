@@ -12,6 +12,7 @@ spring:
       database: Series
       port: 27018
       host: localhost
+      authentication-database: admin
 management:
   endpoints:
     web:
