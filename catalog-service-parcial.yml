@@ -5,9 +5,13 @@ server:
 spring:
   application:
     name: catalog-service-parcial
+mongodb:
+    embedded:
+      version: 4.0.2
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/Catalog  
+      database: test
+      port: 27017 
 #   mongodb:
 #     embedded:
 #       version: 4.0.2
