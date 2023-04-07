@@ -11,6 +11,8 @@ spring:
     mongodb:
       database: test
       port: 27018
+      host: localhost
+      authentication-database: admin        
 management:
   endpoints:
     web:
